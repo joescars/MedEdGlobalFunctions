@@ -15,6 +15,7 @@ using Microsoft.ProjectOxford.Face.Contract;
 using Newtonsoft.Json;
 using System.Net;
 using System.Text;
+using Twilio;
 
 public static void Run(Stream myBlob, string name, TraceWriter log)
 {
@@ -38,7 +39,7 @@ public static void Run(Stream myBlob, string name, TraceWriter log)
     // TODO: Do something with the result
 
     // Create a message
-    str msg = "Notification! {faceRects.Count()} Faces Detected";
+    string msg = "Notification! {faceRects.Count()} Faces Detected";
 
     // Setup Twilio
     string AccountSid = ConfigurationManager.AppSettings["TwilioAccountSID"];
