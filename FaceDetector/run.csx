@@ -26,15 +26,17 @@ public static void Run(Stream myBlob, string name, TraceWriter log)
 
     var faceRects = recognizedFaces.Select(face => face.FaceRectangle);
 
-    log.Info($"Faces: {faceRects.Count()}");
+    log.Info($"Detected {faceRects.Count()} Faces");
 
+    // Put into Array to send off
     Face[] faces = faceRects.Select(faceRect => new Face(
         faceRect.Width, 
         faceRect.Height, 
         faceRect.Left, 
         faceRect.Top)).ToArray();
 
-    // Do something with the result here
+    // TODO: Do something with the result
+
 
 }
 
