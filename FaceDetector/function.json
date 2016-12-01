@@ -5,8 +5,8 @@
             "name": "myBlob",
             "type": "blobTrigger",
             "direction": "in",
-            "path": "samples-workitems/{name}",
-            "connection":""
+            "path": "kinectdata/{name}",
+            "connection":"AzureStorageBlobConnectionString"
         }
     ]
 }
