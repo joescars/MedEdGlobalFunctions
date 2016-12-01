@@ -2,7 +2,9 @@
   "frameworks": {
     "net46":{
       "dependencies": {
-        "Microsoft.ProjectOxford.Face": "1.2.1.2"
+        "Microsoft.ProjectOxford.Face": "1.2.1.2",
+        "Twilio":"4.7.2",
+        "RestSharp":"105.2.2"
       }
     }
    }
