@@ -22,7 +22,7 @@ public static void Run(Stream myBlob, string name, TraceWriter log)
 
     IFaceServiceClient faceServiceClient = new FaceServiceClient(ConfigurationManager.AppSettings["CognitiveServiceAPIKey"]);
 
-    var recognizedFaces = faceServiceClient.DetectAsync(inputBlob).Result;
+    var recognizedFaces = faceServiceClient.DetectAsync(myBlob).Result;
 
     var faceRects = recognizedFaces.Select(face => face.FaceRectangle);
 
